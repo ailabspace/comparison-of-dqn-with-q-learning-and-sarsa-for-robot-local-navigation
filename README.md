@@ -2,6 +2,19 @@
 
 Source code for published paper on Comparison of Deep Q-Learning, Q-Learning and SARSA Reinforced Learning for Robot Local Navigation.
 
+[![Watch the video](https://img.youtube.com/vi/D0UsmpTIG3c/maxresdefault.jpg)](https://youtu.be/D0UsmpTIG3c)
+
+If you have found this repository useful or have used this repository in any of your scientific work, please consider citing my work using this [BibTeX Citation](#bibtex-citation). A full demonstration video of the mobile robot navigation has been uploaded on [Youtube](https://www.youtube.com/watch?v=D0UsmpTIG3c).
+
+## Table of contents
+
+* [Installation](#installation)
+* [Repository contents](#repository-contents)
+* [Getting started](#getting-started)
+* [Hardware and software information](#hardware-and-software-information)
+* [BibTeX Citation](#bibtex-citation)
+* [Acknowledgments](#acknowledgments)
+
 ## Installation
 
 - Firstly, the following packages ([openai_ros](https://bitbucket.org/theconstructcore/openai_ros.git), [turtlebot3](http://wiki.ros.org/turtlebot3)) and their dependencies should be cloned in your ROS workspace.
@@ -20,39 +33,64 @@ Source code for published paper on Comparison of Deep Q-Learning, Q-Learning and
 
 **turtlebot3_rl** - This folder contains the codes for deploying Deep Q-Network, Q-Learning, and Sarsa algorithm in the real environment with the physical Turtlebot3.
 
-## Example usage
+## Getting Started
 
 **Simulation training**
 
-Run `roslaunch my_turtlebot3_training start_dqlearn_training.launch` in your terminal.
+1. Run `roslaunch my_turtlebot3_training start_dqlearn_training.launch` in your terminal.
 
 **Simulation testing** 
 
-Run `roslaunch my_turtlebot3_training start_dqlearn_testing.launch` in your terminal.
+2. Run `roslaunch my_turtlebot3_training start_dqlearn_testing.launch` in your terminal.
 
 **Real world testing (deployment)** 
 
-Physical deployment requires the Turtlebot3 itself and a remote PC to run.
+3. Physical deployment requires the Turtlebot3 itself and a remote PC to run.
 
-On the Turtlebot3:
+4. On the Turtlebot3:
 - Run `roslaunch turtlebot3_bringup turtlebot3_robot.launch`
 
-On the remote PC:
+5. On the remote PC:
 - Run `roscore`
 - Run `roslaunch turtlebot3_bringup turtlebot3_remote.launch`
 - Run `roslaunch turtlebot3_rl deploy_turtlebot3.launch`
 
-## Computer and environment information
+## Hardware and Software Information
 
 **Software**
 
 - OS: Ubuntu 18.04
 - ROS version: Melodic
+- Python version: 2.7
 - Gazebo version: 9
 - CUDA version: 10.0
 - CuDNN version: 7
 
-**Specifications**
+**Computer Specifications**
 
 - CPU: Intel i7 9700
 - GPU: Nvidia RTX 2070
+
+**Mobile Robot Platform**
+
+- [Turtlebot3](https://emanual.robotis.com/docs/en/platform/turtlebot3/overview/)
+
+## BibTeX Citation
+
+If you have used this repository in any of your scientific work, please consider citing the work:
+
+```
+@inproceedings{anas2022comparison,
+  title={Comparison of Deep Q-Learning, Q-Learning and SARSA Reinforced Learning for Robot Local Navigation},
+  author={Anas, Hafiq and Ong, Wee Hong and Malik, Owais Ahmed},
+  booktitle={International Conference on Robot Intelligence Technology and Applications},
+  pages={443--454},
+  year={2022},
+  organization={Springer}
+}
+```
+
+## Acknowledgments
+
+* Thank you [Robolab@UBD](https://ailab.space/) for lending the Turtlebot3 robot platform and lab facilities.
+
